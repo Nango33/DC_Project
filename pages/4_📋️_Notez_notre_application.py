@@ -6,7 +6,7 @@ def iframe_component(url):
 
 def reviewPage():
     st.title("Notez notre application")
-    iframe_component('https://ee.kobotoolbox.org/i/ZUfuy8R1')
+    iframe_component('https://ee.kobotoolbox.org/i/McMDdeaO')
 
 st.set_page_config(page_title="Noter notre application", page_icon="📈")
 st.markdown("# Note application")

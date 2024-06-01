@@ -18,6 +18,8 @@ st.sidebar.header("Scrapper des donnees a partir de Expat")
 st.write(
     """Cette page nous permet de selectionner un nombre de page et de scrapper des donnees sur Expat Dakar avec le nombre de page et la categorie choisie"""
 )
+st.write("**Library utilisés:** pandas, streamlit, selenium, requests, bs4")
+st.write("**Sources des données:** [Expat-Dakar](https://www.expat-dakar.com/).")
 
 
 def scraping(selected_value, selected_category):
@@ -69,6 +71,7 @@ def scraping(selected_value, selected_category):
                     data_list.append(obj)
                 except:
                     pass
+                    
         elif selected_category == 'motos-scooters':
             for container in containers:
                 try:
@@ -120,3 +123,4 @@ def scraping(selected_value, selected_category):
 selected_value = st.selectbox("Selectionner le nombre de page a scraper sur Expat", list(range(1, 11)))
 selected_category = st.radio('Choississez une categorie:', ['voitures','motos-scooters','equipements-pieces'])
 scraping(selected_value, selected_category)
+
